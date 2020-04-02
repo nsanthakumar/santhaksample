@@ -1,0 +1,11 @@
+applications:
+- name: santha-sample-rest-api
+  disk_quota: 1G
+  instances: 1
+  memory: 1G
+  path: target/demo-0.0.1-SNAPSHOT.jar
+  routes:
+  - route: santha-sample-rest-api.cfapps.io
+  buildpacks:
+    - https://github.com/cloudfoundry/java-buildpack.git
+  stack: cflinuxfs3
